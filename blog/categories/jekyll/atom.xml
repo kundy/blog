@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Jekyll | My Octopress Blog]]></title>
+  <link href="http://yoursite.com/blog/categories/jekyll/atom.xml" rel="self"/>
+  <link href="http://yoursite.com/"/>
+  <updated>2014-09-16T22:25:11+08:00</updated>
+  <id>http://yoursite.com/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Windows下安装jekyll]]></title>
+    <link href="http://yoursite.com/blog/2014/09/13/hello-jekyll/"/>
+    <updated>2014-09-13T00:00:00+08:00</updated>
+    <id>http://yoursite.com/blog/2014/09/13/hello-jekyll</id>
+    <content type="html"><![CDATA[<h3>1、下载安装ruby</h3>
+
+<ul>
+<li>下载地址：<a href="http://rubyinstaller.org/downloads/">http://rubyinstaller.org/downloads/</a></li>
+<li>请下载操作系统对应的版本，如我win7 64位系统 下载的是<code>Ruby 2.0.0-p481 (x64)</code></li>
+<li>确保安装在C盘根目录下，如<code>C:\Ruby200-x64</code>，我前面尝试安装D盘就会出现莫名错误</li>
+<li>安装完成后，修改环境变量PATH，加上<code>c:\Ruby200-x64\bin</code>;，以确保任何路径都能调用到ruby.exe</li>
+<li>通过以下命令查看ruby版本号，确认ruby安装成功
+<code>
+ruby --version
+</code></li>
+</ul>
+
+
+<h3>2、更新gem</h3>
+
+<p>Gem是一个管理Ruby库和程序的标准包，它通过Ruby Gem（如 <a href="http://rubygems.org/">http://rubygems.org/</a> ）源来查找、安装、升级和卸载软件包，非常的便捷。
+<code>
+gem update --system
+</code></p>
+
+<h3>3、下载安装Ruby DevKit：</h3>
+
+<p>DevKit 是windows平台下编译和使用本地C/C++扩展包的工具。它就是用来模拟Linux平台下的make, gcc, sh来进行编译。
+- 下载地址：<a href="http://rubyinstaller.org/downloads/">http://rubyinstaller.org/downloads/</a>
+- 同样下载操作系统对应的版本，如win7 64位系统，下载的是<code>DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe</code>
+- 进入devkit解压缩后的目录，运行
+<code>
+ruby dk.rb init
+</code>
+然后需要修改生成的<code>_config.yml</code>文件，在文件最后加上ruby的安装目录路径，注意前面有中杆和空格</p>
+
+<pre><code>ruby dk.rb install
+gem install json --platform=ruby    //测试是否安装成功
+</code></pre>
+
+<h3>4、安装jekyll</h3>
+
+<pre><code>gem install jekyll
+</code></pre>
+
+<h3>5、jekyll对中文的解析</h3>
+
+<p>Jekyll默认的markdown解析器maruku对中文支持不够完善，需要换成RDiscount解析器。
+安装RDiscount解析器：
+<code>
+gem install rdiscount
+</code>
+设置RDiscount解析器，在_config.yml文件中，添加一行：
+<code>
+markdown: rdiscount
+</code></p>
+
+<h3>6、运行jekyll</h3>
+
+<p>如果jekyll安装成功了，应该默认在环境变量中了，在任何目录下都可以输入<code>jekyll -h</code>进行测试
+下载bootstrap的jekyll进行测试先，<a href="https://github.com/plusjade/jekyll-bootstrap.git">https://github.com/plusjade/jekyll-bootstrap.git</a>
+然后进入下载好的git目录，输入
+<code>
+jekyll serve
+</code>
+然后在浏览器中输入<code>http://localhost:4000</code></p>
+]]></content>
+  </entry>
+  
+</feed>
