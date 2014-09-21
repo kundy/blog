@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Jekyll | kundy gitbub]]></title>
+  <title><![CDATA[Category: Jekyll | kundy github]]></title>
   <link href="http://kundy.github.io/blog//blog/categories/jekyll/atom.xml" rel="self"/>
   <link href="http://kundy.github.io/blog//"/>
-  <updated>2014-09-21T22:45:55+08:00</updated>
+  <updated>2014-09-21T23:30:57+08:00</updated>
   <id>http://kundy.github.io/blog//</id>
   <author>
     <name><![CDATA[Kundy]]></name>
@@ -12,6 +12,49 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[使用octopress为github输出blog页面]]></title>
+    <link href="http://kundy.github.io/blog//blog/2014/09/20/hello-octopress/"/>
+    <updated>2014-09-20T00:00:00+08:00</updated>
+    <id>http://kundy.github.io/blog//blog/2014/09/20/hello-octopress</id>
+    <content type="html"><![CDATA[<h3>1、先clone到本地</h3>
+
+<p><a href="https://github.com/imathis/octopress.git">https://github.com/imathis/octopress.git</a></p>
+
+<h3>2、当然也要安装好ruby和devkit</h3>
+
+<h3>3、因为ruby的软件源在国内被屏蔽了，可以换成taobao的</h3>
+
+<ul>
+<li>gem sources -a <a href="http://ruby.taobao.org/">http://ruby.taobao.org/</a></li>
+<li>gem sources -r <a href="http://rubygems.org/">http://rubygems.org/</a></li>
+<li>gem sources -l</li>
+</ul>
+
+
+<h3>4、修改配置</h3>
+
+<p>进入octopress目录，修改里面的gemfile文件，将socrce修改成
+source &ldquo;<a href="https://ruby.taobao.org">https://ruby.taobao.org</a>&rdquo;</p>
+
+<h3>5、安装bundler</h3>
+
+<p>bundler管理项目中gem的依赖项，通过以下命令会自动下载和安装依赖包
+gem install bundler
+bundle install</p>
+
+<h3>6、安装octopress默认主题</h3>
+
+<p>rake install</p>
+
+<h3>5、生成和预览博客。</h3>
+
+<p>rake generate
+rake preview
+然后在浏览器中输入<code>http://localhost:4000</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Windows下安装jekyll]]></title>
