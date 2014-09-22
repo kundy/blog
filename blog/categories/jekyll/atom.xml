@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Jekyll | kundy github]]></title>
+  <title><![CDATA[Category: jekyll | kundy github]]></title>
   <link href="http://kundy.github.io/blog//blog/categories/jekyll/atom.xml" rel="self"/>
   <link href="http://kundy.github.io/blog//"/>
-  <updated>2014-09-21T23:35:40+08:00</updated>
+  <updated>2014-09-22T23:55:18+08:00</updated>
   <id>http://kundy.github.io/blog//</id>
   <author>
     <name><![CDATA[Kundy]]></name>
@@ -57,7 +57,7 @@ rake preview
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Windows下安装jekyll]]></title>
+    <title type="html"><![CDATA[windows下安装jekyll]]></title>
     <link href="http://kundy.github.io/blog//blog/2014/09/13/hello-jekyll/"/>
     <updated>2014-09-13T00:00:00+08:00</updated>
     <id>http://kundy.github.io/blog//blog/2014/09/13/hello-jekyll</id>
